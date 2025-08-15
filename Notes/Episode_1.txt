@@ -1,0 +1,51 @@
+1. What is React?
+React is an open-source JavaScript library developed by Facebook for building reusable, component-based, and efficient user interfaces, especially for single-page applications (SPAs). It uses a virtual DOM to update the UI efficiently.
+
+2. How can we use React?
+We can use React in two main ways:
+- Using CDN links – No installation, just add <script> tags in HTML and start coding. Good for beginners or small demos.
+- Using a development setup – Install React with tools like Create React App, Vite, Next.js, etc., for large projects.
+
+3. What is CDN?
+A Content Delivery Network (CDN) is a distributed network of servers that delivers web content to users based on their geographic location, improving loading speed, availability, and scalability.
+
+4.What is crossorigin in CDN?
+When you load a file from another domain (like unpkg.com), browsers treat it as a cross-origin request.
+The crossorigin attribute:
+- Allows browsers to fetch the file with CORS headers
+- Ensures full error details are shown in the console instead of just “Script error”
+- Helps with debugging
+
+5. Steps to create Hello world using react CDN.
+    1. React.createElement
+        This function creates a React Element (not HTML yet — just a JS object describing the UI).
+        1st argument: HTML tag name ("div", "h1", etc.)
+        2nd argument: Props (attributes like { id: "parent" })
+        3rd argument: Children (other elements or text)
+        
+        Example:
+        React.createElement("h1", {}, "Hello");
+
+    2. Nested Elements
+        We can create nested elements:
+        - A parent <div id="parent">
+        - Inside it, two <div id="child">
+        - Each child has:
+            - <h1> → "I am h1 Tag"
+            - <h2> → "I am h2 tag"
+
+    3. ReactDOM.createRoot
+        - Finds the HTML element with id "root"
+        - Creates a React root where React will control and render UI
+
+        Example:
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+
+    4. root.render
+        - Takes the React element (parent)
+        - Converts it into actual HTML DOM
+        - Places it inside the #root element in your page
+        
+        Example:
+        root.render(parent);
+    
