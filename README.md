@@ -11,7 +11,3 @@ This repo is my playground for experiments, practice code, and mini-projects.
 - 🌐 Routing  
 - 📝 Forms & Events  
 
-## 💻 How to Run
-```bash
-npm install
-npm start
